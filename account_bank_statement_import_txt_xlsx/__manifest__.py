@@ -13,7 +13,7 @@
     "license": "AGPL-3",
     "installable": True,
     "depends": [
-        "account_bank_statement_import",
+        "account_statement_import",
         "multi_step_wizard",
         "web_widget_dropdown_dynamic",
     ],
