@@ -35,8 +35,8 @@ class AccountStatementImportSheetParser(models.TransientModel):
             sheet = workbook.sheet_by_index(0)
             values = sheet.row_values(0)
             return [str(value) for value in values]
-        except xlrd.XLRDError:
-            pass
+        except xlrd.XLRDError as err:
+            _logger.error(err)
 
         data = StringIO(data_file.decode(encoding or "utf-8"))
         csv_data = reader(data, **csv_options)
