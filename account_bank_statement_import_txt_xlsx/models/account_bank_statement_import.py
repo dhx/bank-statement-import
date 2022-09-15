@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 
 
 class AccountBankStatementImport(models.TransientModel):
-    _inherit = "account.bank.statement.import"
+    _inherit = "account.statement.import"
 
     def _get_default_mapping_id(self):
         return (
